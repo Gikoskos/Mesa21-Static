@@ -1,0 +1,62 @@
+.dot-pattern-overlay {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScgLz4KICA8Y2lyY2xlIGN4PScyJyBjeT0nMicgcj0nMicgZmlsbD0nYmxhY2snLz4KPC9zdmc+");
+    background-repeat: repeat;
+}
+
+//styling the join section
+#mesa21-join .layered-block {
+    height: 700px;
+    background-image: url(../assets/join_bckg.jpg);
+    background-repeat: no-repeat;
+         background-attachment: fixed;
+    @include background-size(cover);
+    width: 100%;
+    z-index: 3;
+
+    svg {
+        position: absolute;
+        width: 100%;
+        height: inherit;
+        z-index: -1;
+    }
+
+    .transparent-block {
+        position: absolute;
+        background-color: rgba(245, 245, 245, 0.6);
+        width: 88%;
+        height: 400px;
+        margin: 150px 6%;
+
+        .container {
+            margin-top: 10%;
+        }
+
+        p {
+            color: black;
+            font-family: $opensans_font;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        h2 {
+            color: black;
+            font-size: 36px;
+            font-family: $oswald_font;
+            text-align: center;
+        }
+
+        .col div {
+            text-align: center;
+            margin-top: 50px;
+
+            .join-now-link {
+                padding: 7px 48px;
+                @extend %orange-button;
+            }
+
+            .join-now-link:hover {
+                @extend %orange-button-hover;
+            }
+        }
+    }
+}

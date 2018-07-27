@@ -1,0 +1,13 @@
+//order of imports is VERY important here
+
+//global definitions should always be on top with 'defs' first
+@import 'global/defs';
+@import 'global/background';
+@import 'global/header';
+@import 'global/footer';
+
+@import 'index/video';
+@import 'index/main';
+@import 'index/join';
+@import 'index/carousel';
+@import 'index/map';

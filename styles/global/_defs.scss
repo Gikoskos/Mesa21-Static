@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+$oswald_font : 'Oswald', sans-serif;
+$opensans_font : 'Open Sans', sans-serif;
+
+//definitions of various mixins for cross-browser compatibility
+@mixin background-size($prop) {
+    -webkit-background-size: $prop;
+    -moz-background-size: $prop;
+    -o-background-size: $prop;
+    background-size: $prop;
+}
+
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+
+@mixin filter($filter-type, $filter-amount) {
+    -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
+    -moz-filter: $filter-type+unquote('(#{$filter-amount})');
+    -ms-filter: $filter-type+unquote('(#{$filter-amount})');
+    -o-filter: $filter-type+unquote('(#{$filter-amount})');
+    filter: $filter-type+unquote('(#{$filter-amount})');
+}
+
+
+//default style for the orange buttons
+%orange-button {
+    border: 1px solid #ff8000;
+    background-color: #ff8000;
+    font-weight: bold;
+    font-size: 19px;
+    font-family: $opensans_font;
+    text-align: center;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    @include transition(border-color 0.5s, color 0.5s, background-color 0.5s);
+}
+
+//default style for the orange buttons when
+//the mouse hovers over them
+%orange-button-hover {
+    border-color: white;
+    color: #ff8000;
+    background-color: white;
+}

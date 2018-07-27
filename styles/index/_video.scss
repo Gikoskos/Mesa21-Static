@@ -1,0 +1,22 @@
+//styling for the video row
+#mesa21-video-row {
+    //centers the doordash button
+    justify-content: center;
+    margin-bottom: -60px;
+
+    .mesa21-video {
+        //this is needed to push the video player
+        //on the background and have the doordash button on top
+        z-index: -1;
+        position: relative;
+        top: -60px;
+    }
+
+    .doordash-button {
+        position: relative;
+        top: 25px;
+        width: 289px;
+        height: 59px;
+        background-image: url(../assets/doordashbtn.png);
+    }
+}

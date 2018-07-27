@@ -1,0 +1,67 @@
+//styling for the mission statement row
+#mesa21-main {
+    $main_border: 15px solid white;
+
+    border-right: $main_border;
+    border-top: $main_border;
+    border-bottom: $main_border;
+
+    .mission-statement {
+        background-color: transparent;
+        padding-left: 8%;
+
+        h1 {
+            font-family: $oswald_font;
+            font-size: 27px;
+        }
+
+        p {
+            font-family: $opensans_font;
+            font-size: 19px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .read-more-link {
+            @extend %orange-button;
+            margin: 0 auto;
+            display: block;
+            width: 220px;
+        }
+
+        .read-more-link:hover {
+            @extend %orange-button-hover;
+        }
+
+        .social-media-links {
+            display: block;
+            text-align: center;
+
+            .social-media-link {
+                padding: 4px 6px;
+                margin: 10px 5px;
+                background-color: #fbdfa8;
+                border: 1px solid #fbdfa8;
+                border-radius: 100px;
+                @include transition(transform 0.5s, background-color 0.5s, border-color 0.5s);
+
+                img {
+                    @include transition(filter 0.5s);
+                }
+            }
+
+            .social-media-link:hover {
+                transform: scale(1.2);
+                background-color: #ff8000;
+                border-color: #ff8000;
+
+                img {
+                    @include filter(invert, 100%);
+                }
+            }
+
+        }
+    }
+}
