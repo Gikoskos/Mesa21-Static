@@ -18,6 +18,12 @@
   -o-transition: border-color 0.5s, color 0.5s, background-color 0.5s;
   transition: border-color 0.5s, color 0.5s, background-color 0.5s;
 }
+#mesa21-join .layered-block .transparent-block .col div .join-now-link .orange-button-text::before, #mesa21-main .mission-statement .read-more-link .orange-button-text::before {
+  content: "- ";
+}
+#mesa21-join .layered-block .transparent-block .col div .join-now-link .orange-button-text::after, #mesa21-main .mission-statement .read-more-link .orange-button-text::after {
+  content: " -";
+}
 
 #mesa21-join .layered-block .transparent-block .col div .join-now-link:hover, #mesa21-main .mission-statement .read-more-link:hover {
   border-color: white;

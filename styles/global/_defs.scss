@@ -43,6 +43,14 @@ $opensans_font : 'Open Sans', sans-serif;
     color: white;
     text-decoration: none;
     @include transition(border-color 0.5s, color 0.5s, background-color 0.5s);
+
+    .orange-button-text::before {
+        content: '- ';
+    }
+
+    .orange-button-text::after {
+        content: ' -';
+    }
 }
 
 //default style for the orange buttons when
